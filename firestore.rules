@@ -1,0 +1,31 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /wishes/{wishId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null
+        && request.resource.data.keys().hasOnly(['recipient', 'message', 'color', 'createdAt', 'design'])
+        && request.resource.data.keys().hasAll(['recipient', 'message', 'color', 'createdAt'])
+        && request.resource.data.recipient is string
+        && request.resource.data.recipient.size() > 0
+        && request.resource.data.recipient.size() <= 80
+        && request.resource.data.message is string
+        && request.resource.data.message.size() >= 10
+        && request.resource.data.message.size() <= 600
+        && request.resource.data.color in ['pink', 'green', 'peach', 'lilac', 'cream', 'midnight']
+        && request.resource.data.createdAt == request.time
+        && (!('design' in request.resource.data) || (
+          request.resource.data.design is map
+          && request.resource.data.design.keys().hasOnly(['color', 'font', 'pattern', 'frame', 'icon', 'layout'])
+          && request.resource.data.design.keys().hasAll(['color', 'font', 'pattern', 'frame', 'icon', 'layout'])
+          && request.resource.data.design.color == request.resource.data.color
+          && request.resource.data.design.font in ['serif', 'sans', 'italic']
+          && request.resource.data.design.pattern in ['plain', 'dots', 'stripes', 'glow']
+          && request.resource.data.design.frame in ['none', 'line', 'double', 'dashed']
+          && request.resource.data.design.icon in ['flower', 'heart', 'spark', 'tulip', 'bow', 'none']
+          && request.resource.data.design.layout in ['left', 'center', 'right']
+        ));
+      allow update, delete: if false;
+    }
+  }
+}
