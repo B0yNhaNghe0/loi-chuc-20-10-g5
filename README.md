@@ -1,56 +1,34 @@
-# Web lời chúc 20/10 — Chị em công ti G5
+💐 Gửi yêu thương đến chị em công ti G5 — 20/10
+Nhân ngày Phụ nữ Việt Nam 20/10, mời anh em G5 gửi những lời chúc thật chân thành đến các chị em. Một lời chúc nhỏ cũng có thể mang đến một niềm vui lớn! 💗
+✍️ Cách gửi lời chúc
+1. Mở đường dẫn website được chia sẻ trong nhóm công ty.
+2. Đến phần Viết lời chúc.
+3. Điền người nhận. Bạn có thể gửi đến một người cụ thể hoặc để trống để gửi đến tất cả các chị em.
+4. Viết lời chúc của bạn, từ 10 đến 600 ký tự.
+5. Tự thiết kế tấm thiệp theo sở thích.
+6. Bấm Gửi lời chúc ẩn danh và đợi thông báo “Lời chúc đã được gửi!”.
+🎨 Thiết kế thiệp của riêng bạn
+Bạn có thể chọn:
+- Nền thiệp: hồng phấn, xanh olive, đào dịu, tím lavender, giấy kem hoặc đêm xanh.
+- Kiểu chữ: thanh lịch, hiện đại hoặc mềm mại.
+- Họa tiết: tinh giản, chấm bi, sọc nhẹ hoặc ánh sáng.
+- Khung thiệp: không khung, nét mảnh, khung đôi hoặc nét đứt.
+- Biểu tượng: hoa nhỏ, trái tim, lấp lánh, tulip, nơ xinh hoặc không biểu tượng.
+- Bố cục: thư gửi bạn, thiệp cân giữa hoặc một chút khác biệt.
+Thiệp xem trước sẽ thay đổi ngay khi bạn chỉnh sửa. Nếu chưa có ý tưởng, thử nút Phối ngẫu nhiên để tìm một cách phối mà bạn thích!
+💌 Xem vườn lời chúc
+Sau khi gửi thành công, kéo xuống Vườn lời chúc để xem thiệp của mình và những lời chúc khác.
+Bạn có thể tìm kiếm theo người nhận hoặc nội dung, lọc lời chúc gửi chung/gửi riêng và bấm Tải lời chúc để tải bản tổng hợp nội dung đang được tải trên web.
+🤍 Gửi ẩn danh, gửi bằng cả tấm lòng
+Website không yêu cầu bạn nhập tên hoặc email người gửi. Thiệp hiển thị chữ ký “Một người giấu tên”.
+Hãy viết những lời chúc tử tế, vui vẻ và tôn trọng người nhận. Tránh đưa thông tin cá nhân hoặc nội dung riêng tư vào lời chúc, vì thiệp sẽ xuất hiện trong vườn lời chúc để người truy cập cùng đọc.
+🌷 Một vài ý tưởng để bắt đầu
+Chúc chị em công ti G5 một ngày 20/10 thật nhiều niềm vui, luôn rạng rỡ, tự tin và hạnh phúc. Cảm ơn mọi người đã làm những ngày đi làm thêm đáng yêu!
 
-Web HTML/CSS/JavaScript thuần, không cần npm hoặc build. Gửi lời chúc ẩn danh, tự thiết kế thiệp, xem trước trực tiếp, tìm kiếm, lọc và tải tổng hợp lời chúc.
+Chúc các chị em deadline nhẹ nhàng, cà phê luôn ngon và mỗi ngày đều có một lý do để mỉm cười. Happy 20/10! 💐
 
-## Đưa lên GitHub Pages
-1. Giải nén ZIP. Tạo repository trên GitHub.
-2. Upload toàn bộ **nội dung bên trong** thư mục này vào gốc repository. `index.html` phải nằm ngay ở gốc.
-3. Vào **Settings → Pages → Build and deployment**.
-4. Chọn **Deploy from a branch**, branch **main**, thư mục **/(root)**, rồi Save.
-5. Đợi GitHub triển khai và mở URL trong trang Pages (thường là `https://TEN-TAI-KHOAN.github.io/TEN-REPO/`).
+Mong chị em luôn được trân trọng, được lắng nghe và có thật nhiều cơ hội để làm những điều mình yêu. Chúc mọi người hạnh phúc hôm nay và cả những ngày sau nữa!
 
-GitHub Pages cho phép người có link truy cập trang. Khi chưa cấu hình Firebase, dữ liệu chỉ lưu trên trình duyệt của từng người; lời chúc mẫu không tính vào tổng và không được xuất.
-
-## Kết nối Firebase để mọi người thấy cùng một dữ liệu
-1. Trong Firebase Console, tạo/chọn project, thêm ứng dụng **Web** và lấy `firebaseConfig`.
-2. Mở `firebase-config.js`, thay `window.FIREBASE_CONFIG = null;` bằng:
-
-```js
-window.FIREBASE_CONFIG = {
-  apiKey: "GIA_TRI_CUA_BAN",
-  authDomain: "PROJECT.firebaseapp.com",
-  projectId: "PROJECT",
-  appId: "GIA_TRI_CUA_BAN"
-};
-```
-
-Có thể dán đầy đủ các trường của config Firebase cung cấp. Đây là cấu hình web công khai; không đưa khóa Service Account hoặc khóa private vào repository.
-
-3. **Authentication → Sign-in method → Anonymous → Enable**.
-4. **Authentication → Settings → Authorized domains**: thêm `TEN-TAI-KHOAN.github.io` (chỉ hostname, không có https hoặc tên repo).
-5. Tạo **Cloud Firestore** ở production mode. Trong tab **Rules**, dán toàn bộ nội dung `firestore.rules` rồi **Publish**. Quy tắc này đã hỗ trợ lưu thiết kế thiệp và giới hạn trường, giá trị, độ dài.
-6. Commit thay đổi `firebase-config.js` lên GitHub; đợi Pages triển khai lại.
-7. Mở web ở hai trình duyệt khác nhau, gửi thử một thiệp: cả hai phải thấy cùng lời chúc và thiết kế. Trên trang phải hiện “Vườn lời chúc dùng chung · Cập nhật trực tiếp”.
-
-Nếu lỗi kết nối, kiểm tra config, Anonymous Auth, authorized domains và Firestore Rules. Web giữ nội dung khi gửi thất bại và không chuyển ngầm sang lưu trên thiết bị.
-
-## Chạy trên máy
-Trong thư mục đã giải nén:
-
-```sh
-python -m http.server 8000
-```
-
-Mở http://localhost:8000. Không mở index.html trực tiếp bằng file:// vì app dùng JavaScript module.
-
-## Cấu trúc
-- index.html: nội dung và form thiết kế.
-- style.css: giao diện, bố cục responsive, kiểu thiệp.
-- app.js: xem trước, gửi, lưu, lọc, tìm kiếm, xuất và kết nối Firebase.
-- firebase-config.js: cấu hình Firebase của bạn.
-- firestore.rules: quy tắc đọc/ghi dữ liệu.
-
-## Phạm vi dữ liệu
-Chế độ Firebase hiển thị và xuất 300 lời chúc mới nhất. Thiết kế riêng gồm nền, chữ, họa tiết, khung, biểu tượng và bố cục; không đảm bảo hai người không chọn trùng thiết kế. Người gửi không được lưu tên/email/UID trong tài liệu lời chúc, nhưng Firebase Anonymous Auth vẫn tạo định danh nội bộ; không cam kết ẩn danh tuyệt đối. Theo rules hiện tại, người có link đều có thể xác thực ẩn danh để đọc/gửi; đây không phải giới hạn chỉ nhân viên G5. Không có kiểm duyệt tự động hoặc chống spam phía server. Quản trị viên có thể quản lý lời chúc trong Firebase Console; khách không sửa/xóa lời chúc qua web.
-
-Giao diện dùng Google Fonts và Firebase SDK từ CDN khi có cấu hình; cần Internet để tải những tài nguyên này.
+Gặp khó khăn khi gửi?
+Nếu chưa gửi được, giữ lại nội dung lời chúc và thử lại khi mạng ổn định. Nếu web báo “Đã lưu lời chúc trên thiết bị này”, lời chúc chưa được lưu dùng chung; hãy báo người phụ trách website để kiểm tra.
+Một lời chúc nhỏ, gửi ngàn điều yêu thương. Chúc chị em công ti G5 một ngày 20/10 thật nhiều hạnh phúc! ♡
