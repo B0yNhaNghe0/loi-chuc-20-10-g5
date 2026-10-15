@@ -7,13 +7,718 @@
     <title>Gửi chị em côn ti G5 yêu thương · 20/10</title>
     <meta name="description"
         content="Một lời chúc nhỏ, một ngày thật rạng rỡ. Gửi lời chúc 20/10 ẩn danh đến những người đồng nghiệp tuyệt vời.">
-    <link rel="icon" type="image/png" href="./flower.png">
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <style>
+        /* Chữ lớn hơn và form thiết kế gọn hơn */
+        body {
+            font-size: 16px;
+            isolation: isolate
+        }
+
+        header,
+        main,
+        footer {
+            position: relative;
+            z-index: 1
+        }
+
+        nav {
+            font-size: 15px
+        }
+
+        .eyebrow {
+            font-size: 12px
+        }
+
+        .hero-copy>p {
+            font-size: 17px
+        }
+
+        .button {
+            font-size: 15px
+        }
+
+        .hero-note {
+            font-size: 13px
+        }
+
+        .ribbon {
+            font-size: 13px
+        }
+
+        label {
+            font-size: 14px
+        }
+
+        input,
+        textarea {
+            font-size: 15px
+        }
+
+        .form-meta {
+            font-size: 11px
+        }
+
+        .privacy strong {
+            font-size: 14px
+        }
+
+        .privacy p {
+            font-size: 13px
+        }
+
+        .mode {
+            font-size: 12px
+        }
+
+        .designer-head label {
+            font-size: 14px
+        }
+
+        .designer-head button {
+            font-size: 12px
+        }
+
+        .designer-note {
+            font-size: 13px
+        }
+
+        .design-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px
+        }
+
+        .design-grid label {
+            font-size: 12px
+        }
+
+        select {
+            font-size: 13px;
+            padding: 12px 8px
+        }
+
+        .preview-label {
+            font-size: 11px
+        }
+
+        .filters button,
+        .export {
+            font-size: 12px
+        }
+
+        .toolbar input {
+            font-size: 13px
+        }
+
+        .count {
+            font-size: 13px
+        }
+
+        #sample-note {
+            font-size: 12px
+        }
+
+        .card .to {
+            font-size: 12px
+        }
+
+        .card p {
+            font-size: 21px
+        }
+
+        .card .signature {
+            font-size: 11px
+        }
+
+        .closing p,
+        footer {
+            font-size: 13px
+        }
+
+        /* Họa tiết nền: không nhận thao tác chuột và không che nội dung */
+        .background-decor {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+            user-select: none
+        }
+
+        .background-decor span {
+            position: absolute;
+            color: #b47a86;
+            opacity: .17;
+            font-family: Georgia, serif;
+            font-size: 24px;
+            animation: drift 12s ease-in-out infinite
+        }
+
+        .background-decor span:nth-child(1) {
+            left: 3%;
+            top: 8%
+        }
+
+        .background-decor span:nth-child(2) {
+            left: 20%;
+            top: 33%;
+            font-size: 15px;
+            animation-delay: -4s
+        }
+
+        .background-decor span:nth-child(3) {
+            left: 48%;
+            top: 10%;
+            animation-delay: -7s
+        }
+
+        .background-decor span:nth-child(4) {
+            left: 78%;
+            top: 26%;
+            font-size: 17px;
+            animation-delay: -2s
+        }
+
+        .background-decor span:nth-child(5) {
+            left: 94%;
+            top: 60%;
+            animation-delay: -9s
+        }
+
+        .background-decor span:nth-child(6) {
+            left: 8%;
+            top: 76%;
+            font-size: 18px;
+            animation-delay: -5s
+        }
+
+        .background-decor span:nth-child(7) {
+            left: 36%;
+            top: 89%;
+            animation-delay: -3s
+        }
+
+        .background-decor span:nth-child(8) {
+            left: 65%;
+            top: 68%;
+            font-size: 16px;
+            animation-delay: -8s
+        }
+
+        .background-decor span:nth-child(9) {
+            left: 91%;
+            top: 9%;
+            font-size: 14px;
+            animation-delay: -6s
+        }
+
+        .background-decor span:nth-child(10) {
+            left: 56%;
+            top: 48%;
+            font-size: 12px;
+            animation-delay: -1s
+        }
+
+        .background-decor span:nth-child(11) {
+            left: 2%;
+            top: 43%;
+            font-size: 13px;
+            animation-delay: -10s
+        }
+
+        .background-decor span:nth-child(12) {
+            left: 84%;
+            top: 90%;
+            font-size: 20px;
+            animation-delay: -11s
+        }
+
+        @keyframes drift {
+
+            0%,
+            100% {
+                transform: translate3d(0, 0, 0) rotate(-12deg)
+            }
+
+            50% {
+                transform: translate3d(12px, -22px, 0) rotate(14deg)
+            }
+        }
+
+        .flower {
+            animation: flower-sway 6s ease-in-out infinite;
+            transform-origin: 50% 90%
+        }
+
+        .spark {
+            animation: soft-spark 4s ease-in-out infinite
+        }
+
+        .s2 {
+            animation-delay: -2s
+        }
+
+        .card .ornament {
+            animation: icon-sway 4s ease-in-out infinite;
+            transform-origin: center
+        }
+
+        @keyframes flower-sway {
+
+            0%,
+            100% {
+                transform: rotate(-15deg)
+            }
+
+            50% {
+                transform: rotate(-7deg)
+            }
+        }
+
+        @keyframes soft-spark {
+
+            0%,
+            100% {
+                opacity: .4;
+                transform: scale(.9)
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.1)
+            }
+        }
+
+        @keyframes icon-sway {
+
+            0%,
+            100% {
+                transform: rotate(-6deg) translateY(0)
+            }
+
+            50% {
+                transform: rotate(6deg) translateY(-4px)
+            }
+        }
+
+        /* Đưa ngày vào vùng an toàn của khối bo góc */
+        .art .date {
+            left: 50%;
+            bottom: 55px;
+            transform: translateX(-50%);
+            width: max-content;
+            max-width: 85%;
+            text-align: center;
+            z-index: 3;
+            font-size: 54px
+        }
+
+        .art .date small {
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            white-space: normal
+        }
+
+        @media(max-width:800px) {
+            .ribbon {
+                font-size: 12px
+            }
+
+            .hero-copy>p {
+                font-size: 16px
+            }
+
+            .filters button {
+                font-size: 11px
+            }
+
+            .toolbar input {
+                font-size: 13px
+            }
+        }
+
+        @media(max-width:480px) {
+            .design-grid {
+                grid-template-columns: 1fr
+            }
+
+            .designer-head {
+                align-items: flex-start
+            }
+
+            .designer-head label {
+                max-width: 180px
+            }
+
+            .designer-head button {
+                font-size: 11px;
+                white-space: nowrap
+            }
+
+            .form-meta {
+                gap: 10px
+            }
+
+            .preview-label {
+                font-size: 10px
+            }
+
+            nav {
+                font-size: 12px
+            }
+
+            .filters {
+                flex-wrap: wrap
+            }
+
+            .filters button {
+                font-size: 11px
+            }
+
+            .art .date {
+                bottom: 45px;
+                font-size: 46px
+            }
+
+            .art .date small {
+                font-size: 8px
+            }
+
+            .background-decor span:nth-child(even) {
+                display: none
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            html {
+                scroll-behavior: auto
+            }
+
+            .background-decor span,
+            .flower,
+            .spark,
+            .card .ornament {
+                animation: none
+            }
+        }
+
+        /* Nền nhiều họa tiết hơn, màu rõ hơn */
+        .background-decor span {
+            color: #b66b82;
+            opacity: .34;
+            text-shadow: 0 1px 2px #fff8;
+            font-size: 26px
+        }
+
+        .background-decor span:nth-child(1) {
+            left: 3%;
+            top: 4%;
+            font-size: 22px;
+            animation-delay: -0s;
+            animation-duration: 10s
+        }
+
+        .background-decor span:nth-child(2) {
+            left: 21%;
+            top: 6%;
+            font-size: 28px;
+            animation-delay: -1s;
+            animation-duration: 11s
+        }
+
+        .background-decor span:nth-child(3) {
+            left: 39%;
+            top: 8%;
+            font-size: 18px;
+            animation-delay: -2s;
+            animation-duration: 12s
+        }
+
+        .background-decor span:nth-child(4) {
+            left: 57%;
+            top: 4%;
+            font-size: 25px;
+            animation-delay: -3s;
+            animation-duration: 13s
+        }
+
+        .background-decor span:nth-child(5) {
+            left: 75%;
+            top: 6%;
+            font-size: 21px;
+            animation-delay: -4s;
+            animation-duration: 14s
+        }
+
+        .background-decor span:nth-child(6) {
+            left: 93%;
+            top: 8%;
+            font-size: 30px;
+            animation-delay: -5s;
+            animation-duration: 15s
+        }
+
+        .background-decor span:nth-child(7) {
+            left: 6%;
+            top: 21%;
+            font-size: 28px;
+            animation-delay: -6s;
+            animation-duration: 16s
+        }
+
+        .background-decor span:nth-child(8) {
+            left: 24%;
+            top: 23%;
+            font-size: 18px;
+            animation-delay: -7s;
+            animation-duration: 10s
+        }
+
+        .background-decor span:nth-child(9) {
+            left: 42%;
+            top: 25%;
+            font-size: 25px;
+            animation-delay: -8s;
+            animation-duration: 11s
+        }
+
+        .background-decor span:nth-child(10) {
+            left: 60%;
+            top: 21%;
+            font-size: 21px;
+            animation-delay: -9s;
+            animation-duration: 12s
+        }
+
+        .background-decor span:nth-child(11) {
+            left: 78%;
+            top: 23%;
+            font-size: 30px;
+            animation-delay: -10s;
+            animation-duration: 13s
+        }
+
+        .background-decor span:nth-child(12) {
+            left: 96%;
+            top: 25%;
+            font-size: 22px;
+            animation-delay: -11s;
+            animation-duration: 14s
+        }
+
+        .background-decor span:nth-child(13) {
+            left: 3%;
+            top: 38%;
+            font-size: 18px;
+            animation-delay: -0s;
+            animation-duration: 15s
+        }
+
+        .background-decor span:nth-child(14) {
+            left: 21%;
+            top: 40%;
+            font-size: 25px;
+            animation-delay: -1s;
+            animation-duration: 16s
+        }
+
+        .background-decor span:nth-child(15) {
+            left: 39%;
+            top: 42%;
+            font-size: 21px;
+            animation-delay: -2s;
+            animation-duration: 10s
+        }
+
+        .background-decor span:nth-child(16) {
+            left: 57%;
+            top: 38%;
+            font-size: 30px;
+            animation-delay: -3s;
+            animation-duration: 11s
+        }
+
+        .background-decor span:nth-child(17) {
+            left: 75%;
+            top: 40%;
+            font-size: 22px;
+            animation-delay: -4s;
+            animation-duration: 12s
+        }
+
+        .background-decor span:nth-child(18) {
+            left: 93%;
+            top: 42%;
+            font-size: 28px;
+            animation-delay: -5s;
+            animation-duration: 13s
+        }
+
+        .background-decor span:nth-child(19) {
+            left: 6%;
+            top: 55%;
+            font-size: 25px;
+            animation-delay: -6s;
+            animation-duration: 14s
+        }
+
+        .background-decor span:nth-child(20) {
+            left: 24%;
+            top: 57%;
+            font-size: 21px;
+            animation-delay: -7s;
+            animation-duration: 15s
+        }
+
+        .background-decor span:nth-child(21) {
+            left: 42%;
+            top: 59%;
+            font-size: 30px;
+            animation-delay: -8s;
+            animation-duration: 16s
+        }
+
+        .background-decor span:nth-child(22) {
+            left: 60%;
+            top: 55%;
+            font-size: 22px;
+            animation-delay: -9s;
+            animation-duration: 10s
+        }
+
+        .background-decor span:nth-child(23) {
+            left: 78%;
+            top: 57%;
+            font-size: 28px;
+            animation-delay: -10s;
+            animation-duration: 11s
+        }
+
+        .background-decor span:nth-child(24) {
+            left: 96%;
+            top: 59%;
+            font-size: 18px;
+            animation-delay: -11s;
+            animation-duration: 12s
+        }
+
+        .background-decor span:nth-child(25) {
+            left: 3%;
+            top: 72%;
+            font-size: 21px;
+            animation-delay: -0s;
+            animation-duration: 13s
+        }
+
+        .background-decor span:nth-child(26) {
+            left: 21%;
+            top: 74%;
+            font-size: 30px;
+            animation-delay: -1s;
+            animation-duration: 14s
+        }
+
+        .background-decor span:nth-child(27) {
+            left: 39%;
+            top: 76%;
+            font-size: 22px;
+            animation-delay: -2s;
+            animation-duration: 15s
+        }
+
+        .background-decor span:nth-child(28) {
+            left: 57%;
+            top: 72%;
+            font-size: 28px;
+            animation-delay: -3s;
+            animation-duration: 16s
+        }
+
+        .background-decor span:nth-child(29) {
+            left: 75%;
+            top: 74%;
+            font-size: 18px;
+            animation-delay: -4s;
+            animation-duration: 10s
+        }
+
+        .background-decor span:nth-child(30) {
+            left: 93%;
+            top: 76%;
+            font-size: 25px;
+            animation-delay: -5s;
+            animation-duration: 11s
+        }
+
+        .background-decor span:nth-child(31) {
+            left: 6%;
+            top: 89%;
+            font-size: 30px;
+            animation-delay: -6s;
+            animation-duration: 12s
+        }
+
+        .background-decor span:nth-child(32) {
+            left: 24%;
+            top: 91%;
+            font-size: 22px;
+            animation-delay: -7s;
+            animation-duration: 13s
+        }
+
+        .background-decor span:nth-child(33) {
+            left: 42%;
+            top: 93%;
+            font-size: 28px;
+            animation-delay: -8s;
+            animation-duration: 14s
+        }
+
+        .background-decor span:nth-child(34) {
+            left: 60%;
+            top: 89%;
+            font-size: 18px;
+            animation-delay: -9s;
+            animation-duration: 15s
+        }
+
+        .background-decor span:nth-child(35) {
+            left: 78%;
+            top: 91%;
+            font-size: 25px;
+            animation-delay: -10s;
+            animation-duration: 16s
+        }
+
+        .background-decor span:nth-child(36) {
+            left: 96%;
+            top: 93%;
+            font-size: 21px;
+            animation-delay: -11s;
+            animation-duration: 10s
+        }
+
+        @media(max-width:480px) {
+            .background-decor span:nth-child(even) {
+                display: none
+            }
+
+            .background-decor span:nth-child(odd) {
+                display: block;
+                font-size: 22px;
+                opacity: .32
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <div class="background-decor" aria-hidden="true">
+        <span>✿</span><span>♡</span><span>✧</span><span>❀</span><span>✦</span><span>❁</span><span>✿</span><span>♡</span><span>✧</span><span>❀</span><span>✦</span><span>❁</span><span>✿</span><span>♡</span><span>✧</span><span>❀</span><span>✦</span><span>❁</span><span>✿</span><span>♡</span><span>✧</span><span>❀</span><span>✦</span><span>❁</span><span>✿</span><span>♡</span><span>✧</span><span>❀</span><span>✦</span><span>❁</span><span>✿</span><span>♡</span><span>✧</span><span>❀</span><span>✦</span><span>❁</span>
+    </div>
     <header><a class="brand" href="#">✿ <span>gửi chị em côn ti G5</span></a>
-        <nav><a href="#garden">Vườn lời chúc</a><a class="pill" href="#write">Viết lời chúc ↗</a></nav>
+        <nav><a href="#garden">Vườn lời chúc</a><a class="pill" href="#write">Viết lời chúc</a></nav>
     </header>
     <main>
         <section class="hero">
@@ -25,8 +730,13 @@
                 <div class="hero-note"><span>♡</span> Không cần để tên. Chỉ cần thật lòng.</div>
             </div>
             <div class="art" aria-hidden="true">
-                <div class="orbit"></div><span class="spark s1">✧</span><span class="spark s2">✧</span><img
-                    class="hero-bloom" src="./flower.png" alt="" width="360" height="360">
+                <div class="orbit"></div><span class="spark s1">✧</span><span class="spark s2">✧</span>
+                <div class="flower">
+                    <div class="petals">✿</div>
+                    <div class="stem"></div>
+                    <div class="leaf l1"></div>
+                    <div class="leaf l2"></div>
+                </div>
                 <div class="floating">for you, with love ♡</div>
                 <div class="date">20<span>/</span>10<small>MỘT NGÀY ĐỂ YÊU THƯƠNG</small></div>
             </div>
@@ -93,8 +803,8 @@
             </div>
             <div class="toolbar">
                 <div class="filters"><button class="active" data-filter="all">Tất cả</button><button
-                        data-filter="general">Gửi các chị em</button><button data-filter="personal">Gửi riêng chị em
-                        côn ti G5</button></div><input id="search" aria-label="Tìm lời chúc"
+                        data-filter="general">Gửi các chị em</button><button data-filter="personal">Gửi riêng chị em côn
+                        ti G5</button></div><input id="search" aria-label="Tìm lời chúc"
                     placeholder="⌕  Tìm người nhận, lời chúc…"><button id="export" class="export">Tải lời chúc
                     ↓</button>
             </div>
@@ -102,7 +812,7 @@
             <div id="cards" class="cards"></div>
             <div id="empty" hidden>Chưa có lời chúc phù hợp. Hãy gửi bông hoa đầu tiên nhé ♡</div>
         </section>
-        <section class="closing"><img class="closing-bloom" src="./flower.png" alt="" width="90" height="90">
+        <section class="closing"><span>✿</span>
             <h2>Chúc chị em côn ti G5 một ngày 20/10<br><em>thật nhiều hạnh phúc.</em></h2>
             <p>Và cả những ngày sau cũng vậy.</p>
         </section>
@@ -110,7 +820,7 @@
     <footer><a class="brand" href="#">✿ gửi chị em côn ti G5 yêu thương</a><span>Được gửi bằng cả tấm lòng ♡ ·
             20/10/2026</span></footer>
     <script src="firebase-config.js"></script>
-    <script type="module" src="app.js?v=2"></script>
+    <script type="module" src="app.js?v=3"></script>
 </body>
 
 </html>
