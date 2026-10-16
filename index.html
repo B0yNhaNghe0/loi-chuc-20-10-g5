@@ -7,7 +7,7 @@
     <title>Gửi chị em côn ti G5 yêu thương · 20/10</title>
     <meta name="description"
         content="Một lời chúc nhỏ, một ngày thật rạng rỡ. Gửi lời chúc 20/10 ẩn danh đến những người đồng nghiệp tuyệt vời.">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=hearts1">
     <link rel="icon" type="image/png" href="./favicon.png">
     <style>
         /* Chữ lớn hơn và form thiết kế gọn hơn */
@@ -804,11 +804,16 @@
             <div class="toolbar">
                 <div class="filters"><button class="active" data-filter="all">Tất cả</button><button
                         data-filter="general">Gửi các chị em</button><button data-filter="personal">Gửi riêng chị em côn
-                        ti G5</button></div><input id="search" aria-label="Tìm lời chúc"
+                        ti G5</button></div><label class="sort-label" for="sort-wishes">Sắp xếp<select id="sort-wishes">
+                        <option value="newest">Mới nhất</option>
+                        <option value="hearts">Nhiều tim nhất</option>
+                    </select></label><input id="search" aria-label="Tìm lời chúc"
                     placeholder="⌕  Tìm người nhận, lời chúc…"><button id="export" class="export">Tải lời chúc
                     ↓</button>
             </div>
             <p id="sample-note">Một vài lời chúc mẫu để bạn lấy cảm hứng.</p>
+            <p class="heart-note">Thả tim cho lời chúc bạn yêu thích ♡ · Sắp xếp trong 300 lời chúc mới nhất.</p>
+            <div id="garden-status" role="status" aria-live="polite"></div>
             <div id="cards" class="cards"></div>
             <div id="empty" hidden>Chưa có lời chúc phù hợp. Hãy gửi bông hoa đầu tiên nhé ♡</div>
         </section>
@@ -820,7 +825,7 @@
     <footer><a class="brand" href="#">✿ gửi chị em côn ti G5 yêu thương</a><span>Được gửi bằng cả tấm lòng ♡ ·
             20/10/2026</span></footer>
     <script src="firebase-config.js"></script>
-    <script type="module" src="app.js?v=3"></script>
+    <script type="module" src="app.js?v=hearts1"></script>
 </body>
 
 </html>

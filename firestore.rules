@@ -25,7 +25,16 @@ service cloud.firestore {
           && request.resource.data.design.icon in ['flower', 'heart', 'spark', 'tulip', 'bow', 'none']
           && request.resource.data.design.layout in ['left', 'center', 'right']
         ));
-      allow update, delete: if false;
+      // Chỉ cho phép đổi tim của chính tài khoản ẩn danh hiện tại.
+      // Tài liệu cũ không có hearts được xem như hearts: {}.
+      allow update: if request.auth != null
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['hearts'])
+        && request.resource.data.hearts is map
+        && request.resource.data.hearts.size() <= 10000
+        && request.resource.data.hearts.diff(resource.data.get('hearts', {})).affectedKeys().hasOnly([request.auth.uid])
+        && (!(request.auth.uid in request.resource.data.hearts)
+            || request.resource.data.hearts[request.auth.uid] == true);
+      allow delete: if false;
     }
   }
 }
